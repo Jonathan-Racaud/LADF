@@ -1,0 +1,40 @@
+// @{Maths
+//  @description This module contains maths related functions
+//  It is still a work in progress, but you can expect to have the
+//  following features when it is done:
+//    - simple maths.
+//    - geometry.
+
+/**
+  @{add
+    @description Adds two integers together.
+    
+    @[parameters
+      @int a
+      @int b
+    @]
+
+    @^return int The sum of the two numbers a and b.
+  @}
+*/
+int add(int a, int b) {
+  return a + b;
+}
+
+/**
+  @{mul
+    @description Multiply two integers together
+    
+    @[parameters
+      @int a
+      @int b
+    @]
+
+    @^return int The result of the multiplication between a and b.
+  @}
+*/
+int mul(int a, int b) {
+  return a * b;
+}
+
+//@}Maths
