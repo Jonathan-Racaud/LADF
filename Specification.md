@@ -1,6 +1,6 @@
-# LaDoc - Specification
+# LADF - Specification
 ## What is it?
-It is a specification for a Language Agnostic Documentation Format.
+It is a specification for a Language Agnostic Documentation Format pronounced lad-ef.
 
 It takes its inspiration and initial format idea from the [COD](https://github.com/namuol/codhttps://github.com/namuol/cod) specification.
 
@@ -10,16 +10,16 @@ At this moment, only the JSON output is formally specified
 
 It is **NOT** a documentation generator.
 
-Thus, you'll have to implement your own documentation generator that can parse LaDoc or use one that is already implemented.
+Thus, you'll have to implement your own documentation generator that can parse LADF or use one that is already implemented.
 
-LaDoc can be used as is, in its own file or as part of a code base inside of comment blocks.
+LADF can be used as is, in its own file or as part of a code base inside of comment blocks.
 
-Being language agnostic, LaDoc has no knowledge of functions, classes, objects, monad or other programming languages concepts. It will also **NOT** do code analysis or extract information from the code LaDoc might be directly documenting (if used inside comment blocks for example). 
+Being language agnostic, LADF has no knowledge of functions, classes, objects, monad or other programming languages concepts. It will also **NOT** do code analysis or extract information from the code LaDoc might be directly documenting (if used inside comment blocks for example). 
 
 ## Format
-Even though LaDoc is language agnostic and has no knowledge of programming concepts, it describes different types of tags to convey different meaning that we can't avoid to have and that will ultimately be needed at some points anyway.
+Even though LADF is language agnostic and has no knowledge of programming concepts, it describes different types of tags to convey different meaning that we can't avoid to have and that will ultimately be needed at some points anyway.
 
-LaDoc tries to be as succint as possible, to let as much freedom and flexibility to the writer.
+LADF tries to be as succint as possible, to let as much freedom and flexibility to the writer.
 
 ## Tags
 Every tags start with the `@` symbol which must be the first character in a new line.
@@ -45,14 +45,14 @@ Describes a simple tag that represent a key value pair.
 ```
 @firstname Jonathan
 @lastname Racaud
-@bio Author of the LaDoc specification.
+@bio Author of the LADF specification.
 ```
 output: 
 ```json
 {
   {"firstname": "Jonathan"},
   {"lastname": "Racaud"},
-  {"bio": "Author of the LaDoc specification."}
+  {"bio": "Author of the LADF specification."}
 }
 ```
 
@@ -288,8 +288,8 @@ output:
 ```
 
 ### Untagged text
-Because LaDoc is meant to be flexible, it is allowed to have non tagged text. LaDoc will preserve that text and its formatting.
-Since that kind of text can be found anywhere in the documentation, LaDoc specifies that it will keep that text in a special `!text` array for which each items keep the following information:
+Because LADF is meant to be flexible, it is allowed to have non tagged text. LADF will preserve that text and its formatting.
+Since that kind of text can be found anywhere in the documentation, LADF specifies that it will keep that text in a special `!text` array for which each items keep the following information:
 - Preceding tag
 - Text content
 
